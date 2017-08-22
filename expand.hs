@@ -1,9 +1,12 @@
+tabStop = 8
+
 main :: IO ()
 main = do cs <- getContents
           putStr $ expand cs
 
 expand :: String -> String
-expand cs = concat $ map expandTab cs
+expand cs = concatMap expandTab cs
 
 expandTab :: Char -> String
-expandTab c = if c == '\t' then "        " else [c]
+expandTab '\t' = replicate tabStop ' '
+expandTab c    = [c]

@@ -1,4 +1,8 @@
 1	one
+1	one
+1	one
+2	two
+2	two
 2	two
 3	three
 4	four
@@ -11,3 +15,6 @@
 11	eleven
 12	twelve
 13	thirteen
+1	one
+1	one
+1	one

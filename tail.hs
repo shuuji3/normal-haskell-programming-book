@@ -3,7 +3,7 @@ main = do cs <- getContents
           putStr $ lastNLines 10 cs
 
 lastNLines :: Int -> String -> String
-lastNLines n cs = unlines $ takeLast n $ lines cs
+lastNLines n = unlines . takeLast n . lines
 
 takeLast :: Int -> [a] -> [a]
-takeLast n xs = reverse $ take n $ reverse xs
+takeLast n = reverse . take n . reverse
